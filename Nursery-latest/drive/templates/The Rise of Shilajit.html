@@ -1,0 +1,104 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.118.2">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">    
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        img {
+            padding-top: 5%;
+            width: 80%;
+            height: 80vh;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        p,
+        h1 {
+            padding-left: 10%;
+            padding-right: 20%;
+            font-size: 18px;
+        }
+
+        b {
+            padding-left: 10%;
+            padding-right: 25%;
+        }
+
+        @media screen and (max-width: 400px) {
+            img {
+                width: 100%;
+                /* Make the image full width */
+                height: 20%;
+                /* Maintain aspect ratio */
+                padding: 0;
+                /* Remove padding */
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+   <img src="{% static "img1.png" %}">
+    <br>
+    <!-- <p>Nursery</p> -->
+    <br>
+    <h1>Magical Ashwagandha: A secret weapon to fix stress, love life & boost energy</h1>
+    <br>
+    <br>
+    <p>Have you ever wondered what the secret to boundless energy and vitality might be?</p>
+    <br>
+    <p>Look no further, for Shilajit is here to make an entrance and capture your attention!</p>
+    <br>
+    <p>Shilajit, often referred to as the "rock of life," is a remarkable substance that has been revered for centuries
+        in traditional Ayurvedic medicine.</p>
+    <br>
+    <p>Derived from the ancient mountains, Shilajit is a resinous exudate that oozes out from the cracks and crevices,
+        as if the Earth itself is offering a precious elixir to those in search of rejuvenation.</p>
+    <br>
+    <p>Packed with minerals, trace elements, and humic substances, this potent tar-like substance has earned its
+        reputation as a powerhouse of wellness.</p>
+    <br>
+    <b>Why has Shilajit skyrocketed in popularity?</b>
+    <br>
+    <br>
+    <p>Well, my curious comrades, it's all about the benefits it offers!</p>
+    <br>
+    <p>This extraordinary substance is believed to enhance energy levels, boost stamina, and revitalize the body and
+        mind. It's like a turbocharger for your vitality, propelling you to conquer the world with gusto.</p>
+    <br>
+    <p>But wait, there's more!</p>
+    <br>
+    <p>Shilajit is not just a fuel for the fire; it's also a master of multitasking. It supports cognitive function,
+        promotes overall well-being, and even aids in the management of stress.</p>
+    <br>
+    <p>It's as if this mystical substance has been tailor-made to cater to our modern-day struggles and ambitions.</p>
+    <br>
+    <p>So, whether you're a globetrotting adventurer seeking that extra edge, a student burning the midnight oil, or
+        simply someone looking to add a sprinkle of vitality to your daily routine, Shilajit is here to take center
+        stage.</p>
+    <br>
+    <p>Embrace the rock of life, and let its essence flow through your veins as you conquer the world, one adventurous
+        step at a time!</p>
+    <br>
+    <br>
+</body>
+
+</html>
+{% endblock content %}

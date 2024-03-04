@@ -1,0 +1,27 @@
+.Butterfly img {
+    width: 70%;
+    padding-left: 15%;
+    padding-top: 5%;
+    height: 450px;   
+}
+.Butterfly h4 {
+    padding-left: 17%;
+}
+.Butterfly h1 {
+    text-align: center;
+}
+.Butterfly h3 {
+    padding-left: 15%;
+}
+.Butterfly p {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+@media screen and (max-width: 400px) {
+    .Butterfly img {
+        width: 70vw;
+        height: 70%;
+    }
+}

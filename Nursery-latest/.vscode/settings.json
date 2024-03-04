@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Nursery",
+            "database": "C:\\Users\\SDS\\Downloads\\my_drive (2)\\my_drive\\my_drive\\db.sqlite3"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

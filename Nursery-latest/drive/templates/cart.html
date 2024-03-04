@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.118.2">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">    
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+
+
+    <title>Document</title>
+    <link href="{% static "cart.css" %}" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Your cart</h1>
+
+    <div id="box">
+        <h3>Total</h3>
+        <h2 id="kk">₹{{ total_price }}</h2>
+    </div>
+    <br><br><br><br><br><br><br>
+    {% for item in cart_items %}
+    <div class="mains">
+      
+        <img src="{{item.product.img}}" class="img1" alt="">
+        <h3>{{item.product.subcategory}}</h3>
+        <p >original price {{item.product.org_price}}</p>
+        <p>current price {{item.product.dis_price}}</p>
+
+        <h2 style="float:right;padding-top: 0%; margin-top: -6%;">{{item.product.dis_price}}</h2>
+        <a href="{% url 'remove_from_cart' item.id %}" class="remove">Remove</a>
+	</div>
+    
+    {% empty %}
+    <div>
+    <p>Your cart is empty.</p>
+    </div>
+    {% endfor %}
+    
+    <h2 style="padding-left: 80%;">Total Price: ₹{{ total_price }}</h2><br><br> 
+
+<a href="{% url "category_lists" %}"><button class="checkbox">Continue Shopping</button></a>
+<br><br> 
+<a href="/address/" ><button class="checkbox">Checkout</button></a>
+<br>
+<br>
+
+</body>
+
+</html>
+{% endblock content %}

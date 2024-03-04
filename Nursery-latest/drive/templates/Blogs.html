@@ -1,0 +1,276 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Blog's</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <link href="{% static "Blogs.css" %}" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <main role="main">
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <h2>Blog: Top 10 Plants</h2> <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Home.webp" %}" alt="Card image cap"
+                                style="height: 210px;">
+                            <div class="card-body">
+                                <h3 class="card-text">10 Indoor Plants That Will Transform Your Home.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/indoor/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Butterfly.jpg" %}" alt="Card image cap"
+                                style="height: 241px;">
+                            <div class="card-body">
+                                <h3 class="card-text">Top 10 Plants Proven to Attract Butterflies.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/butterfly/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "night.jpg" %}" alt="Card image cap"
+                                style="height: 208px;">
+                            <div class="card-body">
+                                <h3 class="card-text">Did You Know These 10 Plants Absorb CO2 At Night As Well !</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/absorb/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h2>Blog: Kitchen Gardening</h2> <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "8 Vegetables You Must Grow In Monsoons.jpg" %}"
+                                alt="Card image cap" style="height: 265px;">
+                            <div class="card-body">
+                                <h3 class="card-text">8 Vegetables You Must Grow In Monsoons.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/vegetables/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "10 Fruits That Protects You From Diseases.jpg" %}" 
+                                alt="Card image cap" style="height: 265px;">
+                            <div class="card-body">
+                                <h3 class="card-text">10 Fruits That Protects You From Diseases.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/fruits/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Chukandar.webp" %}"  alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-text">Ever Wondered From Where Fruits And Veggies</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/ever/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h2>Blog: Plant Talk</h2> <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Alovera1.webp" %}"  alt="Card image cap"
+                                style="height: 210px;">
+                            <div class="card-body">
+                                <h2 class="card-text">8 Incredible Health Benefits of Aloe vera.</h2>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/incredible/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Have u got this Mystical Desert Rose.jpg" %}" 
+                                alt="Card image cap" style="height: 170px;">
+                            <div class="card-body">
+                                <h2 class="card-text">Have u got this Mystical Desert Rose.</h2>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/magical/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Whiterose.jpg" %}"  alt="Card image cap"
+                                style="height: 200px;">
+                            <div class="card-body">
+                                <h2 class="card-text">What does a white rose mean.</h2>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/white/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h2>Blog: Sustainable Living</h2> <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Ayredhic.png" %}"  alt="Card image cap"
+                                style="height: 210px;">
+                            <div class="card-body">
+                                <h3 class="card-text">Magical Ashwagandha: A secret weapon to fix stress, love life &
+                                    boost energy.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/magical/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Ayredhic1.png" %}"  alt="Card image cap"
+                                style="height: 210px;">
+                            <div class="card-body">
+                                <h3 class="card-text">The Rise of Shilajit: Why Everyone's Talking About This Ancient
+                                    Resin.</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/rise/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static "Ayredhic.png" %}" alt="Card image cap"
+                                style="height: 240px;">
+                            <div class="card-body">
+                                <h3 class="card-text">Why Ayurveda is the Real Deal ? Time to Ayur-vive !</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                href="/why/">Viewmore</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-muted">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="styles/popper.min.js"></script>
+    <script src="styles/bootstrap.min.js"></script>
+    <script src="styles/holder.min.js"></script>
+</body>
+
+</html>
+{% endblock content %}

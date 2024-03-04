@@ -1,0 +1,23 @@
+.Top10 .card-img-top {
+    padding-left: 10%;
+    padding-top: 5%;
+    width: 80%;
+    height: 450px;
+}
+.Top10 h4 {
+    padding-left: 12%;
+}
+.Top10 h1 {
+    text-align: center;
+}
+.Top10 p{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 400px) {
+    .Top10 .card-img-top {
+        width: 70vw;
+        height: 70%;
+    }
+}

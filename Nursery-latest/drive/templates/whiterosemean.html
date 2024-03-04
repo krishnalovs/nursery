@@ -1,0 +1,76 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.118.2">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">    
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+    <title>What does a white rose mean</title>
+  
+    <style>
+        .img1{
+            padding-top: 5%;
+            width: 80%;
+            height: 450px;
+            padding-left: 10%; 
+            padding-right: 10%;
+        }
+        p{
+            padding-left: 10%;
+            padding-right: 26%;
+            font-size: large;
+        }
+        h2{
+            padding-left: 10%;
+            padding-right: 26%;
+        }
+        .img2{
+            padding-left: 10%;
+            padding-right: 26%;
+            width: 30%;
+            height: 30%;
+        }
+
+        @media screen and (max-width: 400px) {
+            .img1 {
+                width: 70vw;
+                height: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="{% static "Whiterose.jpg" %}" class=img1>
+    <!-- <p>Nursery</p> -->
+    <h2>What does a white rose mean ?</h2>
+    <p>White roses symbolize eternal love, or give them as well-wishes on a new job.
+    </p>
+    <p>There’s a reason that brides wear white on their wedding day, because the color represents purity, innocence, and eternity.</p>
+    <p>This analogy will help you remember that the white roses’ meaning conveys those sentiments.</p>
+    <p>They can also signify a positive new beginning or everlasting love.</p>
+    <p>Their representation of eternity make them a popular choice for sympathy flowers.</p>
+     <h2>What is the meaning of A Single White Rose</h2>
+     <p>The single white rose conveys a strong and deep message of hope, respect, and love. It conveys the purity of that love and deep respect. When a single white rose is given, it not only signals a level of humility but also conveys an everlasting love and devotion between two people.</p>
+     <p>The intention is one of innocence and honesty, acknowledging the powerful bond between two individuals and their ultimate trust for each other.</p>
+     <h2>What is Flower Language?</h2>
+     <p>Floriography, or the language of flowers, is an elegant and subtle code that was used to express feelings and emotions that the speakers were not willing to vocalize during the Victorian era.
+    </p>
+     <p>As the language of flowers contained more than just roses, the plants, herbs, and flowers that they’re grouped with can add subtle nuances to their message of innocence and purity.
+    </p>
+     <p>Today some of the more common meanings for the white rose are purity and youthful innocence.</p>
+     <h2>White rose meaning when combined with other Roses.</h2>
+     <p>The white rose combined with other rose colors can alter and enhance the meanings of both.
+    </p>
+    <p>* White and yellow roses to gather can indicate harmony</p>
+    <p>* White and red roses indicate unity and bonding and are very appropriate for weddings.</p>
+    <p>* While a white rose can indicate truth it can also be implied in a white and red rose combination that the message would be one of true love.</p>
+</body>
+</html>
+{% endblock content %}

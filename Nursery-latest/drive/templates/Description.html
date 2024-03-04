@@ -1,0 +1,168 @@
+{% extends "index.html" %}
+{% load static %}
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Description</title>
+
+{% block content %}
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+
+<!--  -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo 0.118.2">
+<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">    
+<link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+<!--  -->
+
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+<script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+<link href="{% static "Description.css" %}" rel="stylesheet">
+<div class="containers" style="padding-left: 20%;">
+    <div class="col-lg-8 border p-3 main-section bg-white">
+        <div class="row hedding m-0 pl-3 pt-0 pb-3">
+            {{i.name}} - {{i.navbar.name}}
+        </div>
+        <div class="row m-0">
+            <div class="col-lg-4 left-side-product-box pb-3">
+                <img src="{{i.img}}" class="border p-3" alt="">
+                <span class="sub-img">
+
+
+                    <!-- <img src="http://nicesnippets.com/demo/pd-image3.jpg" class="border p-2" alt="">
+                        <img src="http://nicesnippets.com/demo/pd-image4.jpg" class="border p-2" alt=""> -->
+                </span>
+            </div>
+            <div class="col-lg-8">
+                <div class="right-side-pro-detail border p-3 m-0">
+                    <div class="rows">
+                        <div class="col-lg-12">
+                            <span><a href="{{ i.navbar.get_url }}"
+                                    style="text-decoration: none;">{{i.navbar.name}}</a></span>
+                            <p class="m-0 p-0">{{i.name}}</p>
+                        </div>
+                        <div style="padding-left: 4%;">
+                                 <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&#9734;</span>
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="m-0 p-0 price-pro"><del>{{i.dis_price}}</del></p>
+                            <del><p class="m-0 p-0 price-pro">{{i.org_price}}</p></del>
+                            <h6>(MRP Inclusive of all taxes)</h6>
+                            <ul style="list-style-type:disc;">
+                                <li>Shipping ₹79 for entire order</li>
+                                <li>Dispatch in 7 days</li>
+                                <li>Country of origin: India</li>
+                            </ul>
+                            <hr class="p-0 m-0">
+                        </div>
+                        <!-- <div class="col-lg-12 pt-2">
+                                <h5>Product Detail</h5>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris.</span>
+                                <hr class="m-0 pt-2 mt-2">
+                            </div> -->
+                        <div class="col-lg-12">
+                            <!-- <p class="tag-section"><strong>Tag : </strong><a href="">Woman</a><a href="">,Man</a>
+                                </p> -->
+                        </div>
+                                <p style="color:#025E21">Save:{{i.discount}}%</p>
+                                
+                                <a href="{% url "product" i.id %}" class="w3" style="text-decoration: none; color: black;"><p style="color: black;">{{selected_item.name}}</p></a>
+
+                                <br> 
+                        <div class="col-lg-12 mt-3">
+                            <div class="row">
+                                <div class="col-lg-6 pb-2">
+                                    {% if not request.user.is_authenticated %}
+                                    <a href="/login/" class="btn btn-success w-100">Add To Cart</a>
+                                    {% else %}
+                                    <a href="{% url 'add_to_cart' i.id %}" class="btn  w-100" style="background-color:#025E21; color:#ffff">Add To Cart</a>
+                                </div>
+                                      {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div style="padding-left: 33.5%; width: 400%; padding-top: 3%;">
+                <div class="col-lg-8">
+                    <div class="right-side-pro-detail border p-3 m-0">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="m-0 p-0">Today's Offer</p>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <br>
+                                <h5>&starf;Get ₹249 Air Purifier Money Plant Free</h5>
+                                <h6>*On orders above 599</h6>
+                                <h5>&starf;Get ₹275 Vegetable garden pack</h5>
+                                <h6>*On orders above 599</h6>
+                                <h5>&starf;Get Pack of 6 Colourful Pots Free</h5>
+                                <h6>*On orders above 599</h6>
+                                <h5>&starf;Get Pack of 2 Plant Growth Booster Free</h5>
+                                <h6>*On all orders</h6>
+                                <h5>&starf;Get Pack of 2 Special Flower Booster Free</h5>
+                                <h6>*On all orders</h6>
+                                <h5>&starf;Earn 200% ncash</h5>
+                                <h6>On all orders placed today</h6>
+                                <hr class="p-0 m-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="disc">
+                <h2>Description:</h2><br>
+                <p>{{i.description}}</p>
+                <a href="{% url 'Review' %}" class="btn  w-100" style="background-color:#025E21; color:#ffff" >Write a Review</a>
+            </div>
+            <!--  -->
+
+            <!-- </div>
+            <div class="row">
+                <div class="col-lg-12 text-center pt-3">
+                    <h4>More Product</h4>
+                </div>
+            </div>
+            <div class="row mt-3 p-0 text-center pro-box-section">
+                <div class="col-lg-3 pb-2">
+                    <div class="pro-box border p-0 m-0">
+                        <img src="http://nicesnippets.com/demo/pd-b-image1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 pb-2">
+                    <div class="pro-box border p-0 m-0">
+                        <img src="http://nicesnippets.com/demo/pd-b-images2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 pb-2">
+                    <div class="pro-box border p-0 m-0">
+                        <img src="http://nicesnippets.com/demo/pd-b-images3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 pb-2">
+                    <div class="pro-box border p-0 m-0">
+                        <img src="http://nicesnippets.com/demo/pd-b-images4.jpg" alt="">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<br><br>
+<script type='text/javascript'></script>
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Contact Form </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static "contact.css" %}">
+
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.118.2">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">    
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+	 
+</head>
+<body>
+	<div class="head">
+		<div class="seed">
+			<h2>Start Thoughtful Gifting Today!</h2>
+			<h4>Want your team, partners & friends feel closer?</br>
+				You are covered...
+			</h4>
+		</div>
+		<div class="pic">
+			<img src="https://img.freepik.com/free-photo/top-view-gardening-tools-flower-pot_23-2148928434.jpg?t=st=1703765364~exp=1703765964~hmac=b8ce2dd89860170000c54e9c0b3472b508de1dd75730fd73899fd88d8285a876"
+				alt="plant">
+		</div>
+	</div>
+	<div class="container">
+		<h1>Contact Us</h1>
+		<div class="contact-form">
+			<form action="/contact/" method="post">
+				{% csrf_token %}
+				<label for="name">Name:</label>
+				<input type="text" id="name" class= "name" name="name" required>
+
+				<label for="email">Email:</label>
+				<input type="text" id="email" class= "email" name="email" required>
+				<label for="phone_number">Phone number:</label>
+				<input type="tel" id="Phone_number" class= "phone_number" name="phone_number" required>
+				<label for="company name">Company name:</label>
+				<input type="text" id="company_name" class= "company_name" name="company_name" required>
+				<label for="message">Message:</label>
+				<textarea type="text" id="message" class= "message" name="message" required></textarea>
+				<button type="submit">Send Message</button>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>
+{% endblock content %}

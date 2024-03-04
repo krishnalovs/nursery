@@ -1,0 +1,271 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="{% static "color-modes.js" %}"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.118.2">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+
+    
+
+    <style>
+        a{
+            text-decoration:none;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.2rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .card-body .w3 p:hover{
+            color:blue;
+
+        }
+
+        {% comment %} .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        } {% endcomment %}
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        .col {
+            width: 25%;
+            margin-right: 30px;
+        }
+
+        .col1 {
+            width: 18%;
+
+
+        }
+
+        .button {
+            width: 120px;
+            background-color: rgb(250, 128, 114);
+            border: 0px solid rgb(40, 39, 39);
+            padding: 6px;
+            border-radius: 25px;
+            font-size: 20px;
+            
+
+        }
+
+        /* Add this inside the existing media query for responsiveness */
+
+        /* Responsive Styles for Mobile */
+        @media screen and (max-width: 786px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            /* .filter {
+                 text-align: center;
+             }
+
+
+            .filter select {
+                width: 100%;
+            } */
+
+            .w3-sidebar {
+            width: 35%;
+        }
+
+            /* Adjust other styles as needed for smaller screens */
+        }
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            /* .filter {
+                 text-align: center;
+             } 
+
+        
+            .filter select{
+                width:100%;
+            } */
+
+            .w3-sidebar {
+            width: 28000%;
+        }
+
+            /* Adjust other styles as needed for smaller screens */
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+    
+
+    <div class="content" style="display:flex">
+        <div class="w3-sidebar w3-bar-block w3-light w3-card position-sticky">
+            <h3>Filters</h3>
+            <hr>
+        
+                <h5>Product Type:</h5>
+                <br>
+       
+        <ul class="">
+                    {% for navbar in categories %}
+                  <li class="navbar_level_1_li">
+                    <a href="{{ navbar.get_url }}" style="text-decoration: none; color: black;">{{ navbar.name }}</a>
+                    {% endfor %}
+                </ul>
+             <form method="GET" action="/product_list/">
+            <h5>Price</h5>
+            <hr>
+            <ul style="list-style: none;">
+                <li><a href="#" class="w3-bar-item w3-button" style="display: flex; gap: 1rem;"><span
+                            style=" font-weight: 500; font-size: 16px; ">₹</span><input type="number" name="min_price" id="min_price"
+                            style="padding: 5px;width: 150px;" placeholder="From"></a> </li>
+                <li><a href="#" class="w3-bar-item w3-button" style="display: flex; gap: 1rem;"><span
+                            style="font-weight: 500; font-size: 16px; ">₹</span><input type="number" name="max_price" id="max_price"
+                            style="padding:5px;width: 150px;" placeholder="To"></a> </li>
+                            <div style="padding-left: 30%;">
+                                <button type="submit" style="background-color:#025E21; color:white; padding:5px;border-radius:5px;">Filter</button>
+                            </div>    
+            </ul>
+           </form>
+            <hr>
+        </div>
+    
+        <div class="album py-3 bg-body-tertiary">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+           
+        
+    
+            {% for selected_item in selected_items %}
+                    <div class="col" style="width: 230px;">
+                        <div class="card shadow-sm">
+    
+                            <img src="{{selected_item.img}}">
+                            <div class="card-body">
+                                <h6 class="card-title" style="color:red;">₹{{selected_item.org_price}}</h6>
+                                <h4>₹{{selected_item.dis_price}}</h4>
+                                <p style="color:#025E21">Save:{{selected_item.discount}}%</p>
+                                
+                                <a href="{% url "product" selected_item.id %}" class="w3" style="text-decoration: none; color: black;"><p style="color: black;">{{selected_item.name}}</p></a>
+                                <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&starf;</span>
+                                <span style="font-size:150%;color:yellow;">&#9734;</span>
+                                <br> 
+                                {% if not request.user.is_authenticated %}
+                                <a href="/login/"><input type="button" value="Add to Cart" class="button" style="background-color: #025E21;color: white;font-size: 15px;cursor: pointer;"></a>
+                                 {% else %}
+                                 <a href="{% url 'add_to_cart' selected_item.id %}"><input type="button" value="Add to Cart" class="button" style="background-color: #025E21;color: white;font-size: 15px;cursor: pointer;"></a>
+                                 {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="{% static "bootstrap.bundle.min.js" %}"></script>
+    {% endblock content %}
+    <body>

@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link href="{% static "cart.css" %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Your cart</h1>
+
+    <div id="box">
+        <h3>Total</h3>
+        <h2 id="kk">₹1655</h2>
+    </div>
+    <br><br><br><br><br><br><br>
+
+    <!-- box -->
+    <div class="main">
+        <img src="{% static "firstcart.png" %}" class="img1" alt="">
+        <h3>best gardening</h3>
+        <p style="text-decoration: line-through;">original price 1755</p>
+        <p>current price 1655</p>
+
+        <h2 style="float: right;padding-top: 0%; padding-left: 8%;margin-top: -6%;">₹1655</h2>
+        <select style="width: 8%; height: 25%; float: right;margin-top: -6%;margin-right: 10%;">1
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+        </select>
+    </div>
+
+    <h1 id="subtotal">subtotal</h1>
+    <h2 id="subcost">₹ 1,655</h2>
+    <br><br><br><br><br><br>
+    <center>
+        <button>Checkout</button>
+        <!-- <input type="button"> -->
+    </center>
+    <br>
+
+</body>
+
+</html>{% endblock content %}

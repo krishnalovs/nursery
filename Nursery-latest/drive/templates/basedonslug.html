@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+    {% for selected_item in selected_items %}
+    	<h2>{{ selected_item }}</h2>
+    {% endfor %}
+    
+{% endblock content %}

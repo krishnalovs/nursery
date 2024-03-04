@@ -1,0 +1,304 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css" 
+integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .div1 {
+      width: 100%;
+      height: 20vh;
+     
+    }
+
+    .div2 {
+      width: 100%;
+      height: 15vh;
+      background-color: rgb(56, 56, 247);
+      position: fixed;
+
+    }
+
+    
+    
+
+    @media screen and (max-width: 600px) {
+      #search {
+        width: 40%;
+          }
+        }
+
+    @media screen and (max-width: 460px) {
+      #search {
+        width: 45%;
+        margin-right: 3%;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      #search {
+        width: 50%;
+        margin-right: 3%;
+      }
+    }
+
+    #h1 {
+      color: white;
+      font-size: 30px;
+      padding-top: 1%;
+      padding-left: 5%;
+    }
+
+    @media screen and (max-width: 420px) {
+      #h1 {
+
+        font-size: 20px;
+      }
+
+    }
+    @media  (max-width: 900px) {
+    
+    .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .5rem;
+    font-size: 2rem;
+    color: var(--yellow);
+    margin-bottom: 2rem;
+    margin-left:25%;
+}
+    }
+    @media  (max-width: 400px) {
+    
+    .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .5rem;
+    font-size: 2rem;
+    color: var(--yellow);
+    margin-bottom: 2rem;
+    margin-left:30%;
+}
+    }
+    
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical
+    }
+
+   
+   
+
+    input[type=submit] {
+      background-color:#025E21;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    input[type=submit]:hover {
+      background-color: black;
+      color: white;
+    }
+
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-left: 9%;
+      margin-right: 9%;
+      width: 80%;
+   
+    }
+    
+    
+
+
+:root {
+    --yellow: #FFBD13;
+    --blue: #4383FF;
+    --blue-d-1: #3278FF;
+    --light: #F5F5F5;
+    --grey: #AAA;
+    --white: #FFF;
+    --shadow: 8px 8px 30px rgba(0,0,0,.05);
+}
+
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .5rem;
+    font-size: 2rem;
+    color: var(--yellow);
+    margin-bottom: 2rem;
+    margin-right: 80%;
+}
+.rating .star {
+    cursor: pointer;
+}
+.rating .star.active {
+    opacity: 0;
+    animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.rating .star:hover {
+    transform: scale(1.1);
+}
+textarea {
+    width: 100%;
+    background: var(--light);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-bottom: .5rem;
+}
+.btn-group {
+    display: flex;
+    grid-gap: .5rem;
+    align-items: center;
+}
+.btn-group .btn {
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 500;
+}
+.btn-group .btn.submit {
+    background: var(--blue);
+    color: var(--white);
+}
+.btn-group .btn.submit:hover {
+    background: var(--blue-d-1);
+}
+.btn-group .btn.cancel {
+    background: var(--white);
+    color: var(--blue);
+}
+.btn-group .btn.cancel:hover {
+    background: var(--light);
+}
+
+  </style>
+</head>
+<body>
+ 
+      <div class="container">
+        <h2 class="review">Write A Review</h2>
+        <br>
+        <form action="action_page.php">
+        
+    
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Enter you name">
+    
+          <label for="lname">Email</label>
+          <input type="text" id="lname" name="Subject" placeholder="Enter you email">
+          
+          <label for="lname">Review Title</label>
+          <input type="text" id="lname" name="Subject" placeholder="Give your review a title" >
+          
+          <label for="fname">Rating</label>
+          <br><br>
+          <div class="wrapper">
+       
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="rating" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+             
+            </form>
+        </div>
+      <script>
+    const allStar = document.querySelectorAll('.rating .star')
+    const ratingValue = document.querySelector('.rating input')
+    
+    allStar.forEach((item, idx)=> {
+        item.addEventListener('click', function () {
+            let click = 0
+            ratingValue.value = idx + 1
+    
+            allStar.forEach(i=> {
+                i.classList.replace('bxs-star', 'bx-star')
+                i.classList.remove('active')
+            })
+            for(let i=0; i<allStar.length; i++) {
+                if(i <= idx) {
+                    allStar[i].classList.replace('bx-star', 'bxs-star')
+                    allStar[i].classList.add('active')
+                } else {
+                    allStar[i].style.setProperty('--i', click)
+                    click++
+                }
+            }
+        })
+    })
+    
+    
+      </script>
+       
+     
+ 
+       <label for="subject">Body of Review</label>
+       <textarea id="subject" name="Description" placeholder="Write your comments here..." style="height:100px"></textarea>
+ 
+       
+       <a href="#"><input type="submit" value="Submit Review"></a>
+        </form>
+       
+      </div>
+
+</body>
+</html>

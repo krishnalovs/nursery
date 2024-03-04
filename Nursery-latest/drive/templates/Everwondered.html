@@ -1,0 +1,123 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.118.2">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">    
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">
+    <title>Ever Wondered From Where Fruits And Veggies Get Their Stunning Colors</title>
+    <style>
+        p {
+            padding-left: 22%;
+            padding-right: 22%;
+            font-size: large;
+        }
+
+        .img2 {
+            padding-left: 22%;
+            width: 30%;
+            height: 30%;
+        }
+
+        .img1 {
+            padding-top: 5%;
+            width: 60%;
+            height: 50%;
+            padding-left: 20%;
+        }
+
+        @media screen and (max-width: 400px) {
+            .img1 {
+                width: 70vw;
+                height: 40%;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .img2 {
+                padding-left: 18%;
+                padding-right: 18%;
+                width: 60vw;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            h2 {
+               padding-right: 22%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<img src="{% static "fruitimage1.webp" %}"class="img1">
+    <!-- <p>Nursery</p> -->
+    <h2 style="padding-left: 22%; padding-right: 22%;">Ever Wondered From Where Fruits And Veggies Get Their Stunning
+        Colors</h2>
+    <p>How do fruits and vegetables create all that color? We tend to differentiate fruits at first glance a lot based
+        on their Colors.</p>
+    <p>The Apple is red, the Orange is, well orange, and vegetables are mostly different shades of green with a few
+        exceptions.</p>
+    <p>But have you wondered why they have those colors, why is aubergine purple or why are some varieties of Bell
+        pepper yellow.</p>
+    <p>Well, the answer is nutrients. Nutrients present in the fruit and vegetables give them their natural color. It
+        allows us to know what is needed.</p>
+    <p>When people eat just whole white food, they miss out on the various other nutrients that their body needs. And
+        no, multi-vitamin is not the answer to this deficiency.</p>
+    <p>To let our body, know what nutrients are we ingesting, fruits and vegetables are in color-coded schemes.</p>
+    <a href="#" style="text-decoration: none;color: red;">
+        <h2 style="padding-left: 22%;">Red:</h2>
+        <img src="{% static "Red.webp" %}"class="img2">
+    </a>
+    <p>Fruits like Apples, strawberries, Red Bell-pepper, etc. also contain anthocyanin and an additional phytonutrient
+        called Lycopene. Lycopene help lower your risk for cancer and heart disease. Strawberries, beets, and kidney
+        beans are good sources of folic acid.</p>
+    <p>The beans are also packed with fiber, protein, and iron. Cranberries, strawberries, raspberries, red or pink
+        grapefruit, and red bell peppers all are loaded with vitamin C.</p>
+    <p>Red bell peppers are also an excellent source of vitamin A, which is necessary for eye and skin health.</p>
+    <a href="#" style="text-decoration: none;color: red;">
+        <h2 style="padding-left: 22%;">Green:</h2>
+         <img src="{% static "Green.webp" %}"class="img2">
+    </a>
+    <p>Create your home garden, Buy Seeds | View Details</p>
+    <p>Compound called chlorophyll gives green fruits and vegetables this color. Some of these fruits and vegetables
+        also contain indoles, which lower the risk for cancer also reduces problems with our vision.</p>
+    <p>Some common nutrients in many of these fruits and vegetables include vitamin A, vitamin C, vitamin K, and folate.
+    </p>
+    <a href="#" style="text-decoration: none;color: red;">
+        <h2 style="padding-left: 22%;">Blue and Purple:</h2>
+         <img src="{% static "Blue and Purple.webp" %}"class="img2">
+    </a>
+    <p>Fruits and vegetables which come in hues of blue and purple like Eggplant, Blue-berries, Plums, etc. have
+        phytonutrients known as anthocyanin.</p>
+    <p>Anthocyanin has antioxidants properties and helps lower the chances of heart disease, stroke, cancer, macular
+        degeneration, and memory problems. Anthocyanin is also present in Red-colored fruits and vegetables.</p>
+    <p>They also contain various other vitamins and nutrients which are also beneficial to our body immune system.</p>
+    <a href="#" style="text-decoration: none;color: red;">
+        <h2 style="padding-left: 22%;">White:</h2>
+         <img src="{% static "White.webp" %}"class="img2">
+    </a>
+    <p>White-colored vegetables like Onions, Potatoes, Bananas, Cauliflowers, etc. have various nutrients in them.
+        Cauliflower is a rich source of vitamin C, while Potatoes and bananas are a rich source of potassium.</p>
+    <p>Mushrooms are a rich source of riboflavin (vitamin B2) and niacin. These fruits and vegetables get their color
+        from polyphenol compounds with antioxidant properties. Consuming more white fruits and vegetables helps reduces
+        the chances of colorectal cancer.</p>
+    <a href="#" style="text-decoration: none;color: red;">
+        <h2 style="padding-left: 22%;">Yellow and Orange:</h2>
+         <img src="{% static "Yellow and Orange.webp" %}"class="img2">
+    </a>
+    <p>Fruits and vegetables of orange and yellow color has a compound called carotenoids in their plants. Carotenoids
+        help improve immune function and lowers risk for heart disease, vision difficulties, and cancer.</p>
+    <p>Beta-carotene is a carotenoid which our body uses to create vitamin A. orange and yellow fruits and vegetables
+        are a rich source of folate, potassium, Bromium, and vitamin C.</p>
+</body>
+
+</html>
+{% endblock content %}

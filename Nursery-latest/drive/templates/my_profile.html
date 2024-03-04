@@ -1,0 +1,117 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+
+<style media="screen">
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #025E21;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+    .buttons {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #025E21;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        padding: 5px;
+        width: fitcontent;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        }
+  
+    .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    }
+  
+    .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+  
+    .button:hover span {
+    padding-right: 25px;
+    }
+  
+    .button:hover span:after {
+    opacity: 1;
+    right: 0;
+    }
+    @media screen and (max-width: 400px) {
+      .img1 {
+          width: 70vw;
+          height: 40%;
+      }
+  }
+
+  @media screen and (max-width: 400px) {
+      .img2 {
+          padding-left: 18%;
+          padding-right: 18%;
+          width: 60vw;
+      }
+  }
+  @media screen and (max-width: 400px) {
+      h2 {
+         padding-right: 22%;
+      }
+  } 
+
+</style>
+<br><br><br>
+<div style="background-color:#c8ffc6;">
+  <div style="adding-left:300px; display:flex; gap:5rem;" class="container">
+
+
+    <div class="col-sm-4 col-md-4" style=" margin-left:20px;">
+        <blockquote style="color: white;">
+            <div style="display:flex; gap:1rem;"><h4>UserName:</h4><p>{{request.user}}</p></div> <br><div style="display:flex; gap:1rem;"><h4>Last_Name:</h4><cite title="Source Title"> {{customer.last_name}} <i class="glyphicon glyphicon-map-marker"></i></cite></div><br>
+        </blockquote>
+        <div style="display:flex; gap:1rem;"><h4>FirstName:</h4>
+        <p> <i class="glyphicon glyphicon-phone" ></i> 
+            {{customer.first_name}}
+        </p>
+    </div>
+    </div>
+    {% for address in address %}
+    <div>
+        <div style="display:flex; gap:1rem;"><h4>Mobile_No:</h4>
+        <p>{{ address.number }}</p>
+        </div><br>
+        <div style="display:flex; gap:1rem;"><h4>Address:</h4>
+        <p>{{ address.street_address }}, {{ address.address_line2 }}, {{ address.city }}, {{ address.state }}, {{ address.postal_code }}</p>
+        </div>   
+    </div>
+      {% endfor %}
+</div>
+<br>
+<div style="text-align: center;display:flex;">
+<a href="{% url "edit_profile" %}" style="color:white;"><button class="button" ><span style="color:white">Edit Profile </span></button></a>
+<a href="{% url "category_lists" %}" style="color:white;"><button class="buttons" ><span style="color:white">Continue Shopping</span></button></a>
+<a href="{% url "add_address" %}" style="color:white;"><button class="buttons" ><span style="color:white">Add New address</span></button></a>
+</div><br>
+
+</div>
+<br><br><br><br><br><br>
+{% endblock content %}

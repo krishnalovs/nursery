@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.118.2">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="{% static "styles/bootstrap.min.css" %}" rel="stylesheet">    
+</head> 
+
+
+<h1 style="color:#025E21;text-align:center;">Delivery Address</h1>
+{% for address in addresses %}
+
+   <div style=" padding:20px;">
+    <p>{{ address.street_address }}, {{ address.address_line2 }}, {{ address.city }}, {{ address.state }}, {{ address.zip_code }}</p>
+   </div>
+    <div style="margin:20px">
+    <button style="width: 150px;height: 40px;color: black; border:none; border-radius:5px"><a href="{% url 'select_address' address.id %}">Select this address</a></button>
+    <button style="width: 100px;height: 40px;color: black; border:none; border-radius:5px"><a href="{% url "edit_address" address.id%}">Edit address</a></button>
+    <button style="width: 100px;height: 40px;color: black; border:none; border-radius:5px"><a href="{% url "add_address" %}">Add address</a></button>
+    <button style="width: 100px;height: 40px;color: black; border:none; border-radius:5px"><a href="{% url 'delete_address' address.id %}">Delete address</a></button>
+</div>
+{% empty %}
+    
+    <p>No addresses found.</p>
+    <a href="{% url "add_address" %}">Add address</a>
+{% endfor %}
+
+
+{% endblock content %}
