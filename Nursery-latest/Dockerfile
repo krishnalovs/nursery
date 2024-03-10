@@ -4,7 +4,7 @@ FROM python:3.9.16
 WORKDIR /app
 
 # Copy only the requirements file to leverage Docker cache
-COPY requirements.txt .
+COPY requirements.txt.
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,17 +17,6 @@ RUN python manage.py migrate
 
 # Expose the port that Django will run on
 EXPOSE 8002
-
-# Start the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8002"]
-
-
-
-
-
-
-
-
 
 
 
