@@ -18,13 +18,6 @@ RUN python manage.py migrate
 # Expose the port that Django will run on
 EXPOSE 8002
 
-# Start the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8002"]
-
-
-
-
-
 
 
 
